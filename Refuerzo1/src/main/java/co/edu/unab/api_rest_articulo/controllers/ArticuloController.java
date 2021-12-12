@@ -49,22 +49,22 @@ public class ArticuloController {
         return articuloService.obtenerPorId(id);
     }
 
-    @GetMapping("/{categoria}")
+    @GetMapping("/categoria/{categoria}")
     public ArrayList<ArticuloModel> obtenerArticuloPorCategoria(@PathVariable("categoria") String categoria){
         return articuloService.obtenerPorCategoria(categoria);
     }
 
-    @GetMapping("/{nombre}")
+    @GetMapping("/nombre/{nombre}")
     public ArrayList<ArticuloModel> obtenerArticuloPorNombre(@PathVariable("nombre") String nombre){
         return articuloService.obtenerPorNombre(nombre);
     }
 
-    @GetMapping("/{precio}")
+    @GetMapping("/precio/{precio}")
     public ArrayList<ArticuloModel> obtenerArticuloPorPrecioMayorIgual(@PathVariable("precio") Long precio){
         return articuloService.obtenerPorPrecioMayorIgual(precio);
     }
 
-    @GetMapping("/{cantidad}")
+    @GetMapping("/cantidad/{cantidad}")
     public ArrayList<ArticuloModel> obtenerArticuloPorCantidadMenorIgual(@PathVariable("cantidad") int cantidad){
         return articuloService.obtenerPorCantidadMenorIgual(cantidad);
     }
